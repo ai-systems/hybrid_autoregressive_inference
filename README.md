@@ -1,4 +1,4 @@
-# Unification-based Reconstruction of Multi-hop Explanations for Science Questions (EACL 2021)
+# Hybrid Autoregressive Inference for Scalable Multi-hop Explanation Regeneration (AAAI 2022)
 
 ## Abstract
 
