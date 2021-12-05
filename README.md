@@ -11,6 +11,19 @@ Welcome! :)
 
 Here, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR on the [WorldTree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
 
+**Setup:**
+Install the [sentence-transformers](https://www.sbert.net/) package:
+
+`pip install -U sentence-transformers`
+
+Install the [faiss-gpu](https://pypi.org/project/faiss-gpu/) package:
+
+`pip install faiss-gpu`
+
+Install other requirements:
+
+`pip install -R requirements.txt`
+
 **Dense encoder:**
 
 The Bert-based autoregressive bi-encoder used in our experiments can be downloaded [here!](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
