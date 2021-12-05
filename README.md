@@ -23,6 +23,8 @@ This will create the [FAISS](https://faiss.ai/) index and perform multi-hop infe
 
 **Compute the Mean Average Precision (MAP) score:** 
 
+Once the experiment is completed, you can compute the Mean Average Precision (MAP) using the following command:
+
 `./evaluate.py --gold=./data/questions/dev.tsv prediction.txt`
 
 The experiment is performed by default on the dev-set. Since the explanations in the test-set are masked, if you want to reproduce our results on this split, you would need to submit `prediction.txt` to the official leaderboard, which can be found [here!](https://competitions.codalab.org/competitions/20150#results)
