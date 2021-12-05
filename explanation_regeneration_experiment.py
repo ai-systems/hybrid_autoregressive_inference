@@ -33,9 +33,6 @@ with open("data/cache/eb_train.mpk", "rb") as f:
 with open("data/cache/eb_dev.mpk", "rb") as f:
     eb_dataset_dev = msgpack.unpackb(f.read(), raw=False)
 
-with open("data/cache/eb_test.mpk", "rb") as f:
-    eb_dataset_test = msgpack.unpackb(f.read(), raw=False)
-
 #load mapping between questions and hypotheses
 with open('data/cache/hypothesis_train.json') as f:
     hypothesis_train = json.load(f)
