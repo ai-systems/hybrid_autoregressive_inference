@@ -9,6 +9,8 @@ Welcome! :)
 
 Here, you can find the code (`experiment.py`) to reproduce the results obtained by SCAR on the [Worldtree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
 
+**Dense Encoder:**
+
 The Bert-based autoregressive bi-encoder used in our experiments can be downloaded [here!](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
 
 **Run the experiment:**
