@@ -27,7 +27,9 @@ Once the experiment is completed, you can compute the Mean Average Precision (MA
 
 `./evaluate.py --gold=./data/questions/dev.tsv prediction.txt`
 
-The experiment is performed by default on the dev-set. Since the explanations in the test-set are masked, if you want to reproduce our results on this split, you would need to submit `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
+The experiment is performed by default on the dev-set. 
+
+Since the explanations in the test-set are masked, if you want to reproduce our results on this split, you would need to submit `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
 
 ### Bibtex
 If you use SCAR in your work, or find this repository useful, please consider citing our paper.
