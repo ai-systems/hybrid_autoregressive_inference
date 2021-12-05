@@ -9,7 +9,7 @@ Regenerating natural language explanations in the scientific domain has been pro
 
 Welcome! :) 
 
-Here, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR (Scalable Autoregressive Inference) on the [WorldTree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
+In this repository, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR (Scalable Autoregressive Inference) on the [WorldTree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
 
 **Setup:**
 
