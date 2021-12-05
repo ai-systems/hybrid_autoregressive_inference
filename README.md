@@ -12,6 +12,7 @@ Welcome! :)
 Here, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR on the [WorldTree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
 
 **Setup:**
+
 Install the [sentence-transformers](https://www.sbert.net/) package:
 
 `pip install -U sentence-transformers`
