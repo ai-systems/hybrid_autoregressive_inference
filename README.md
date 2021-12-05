@@ -15,7 +15,7 @@ The Bert-based autoregressive bi-encoder used in our experiments can be download
 
 **Run the experiment:**
 
-Once the bert model is downloaded and the requirements installed, run the following command to start the experiment:
+Once the dense model is downloaded and the requirements installed, run the following command to start the experiment:
 
 `python ./experiment.py`
 
