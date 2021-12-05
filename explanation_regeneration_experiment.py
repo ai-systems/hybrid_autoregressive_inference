@@ -1,5 +1,5 @@
 """
-Code to reproduce the results on the multi-hop explanation regeneration task (https://github.com/umanlp/tg2019task)
+Code to reproduce the results on the multi-hop explanation regeneration task ( https://github.com/umanlp/tg2019task )
 presented in "Hybrid Autoregressive Inference for Scalable Multi-hop Explanation Regeneration" (AAAI 2022)
 """
 import msgpack
@@ -116,7 +116,6 @@ QK = 70 # explanatory power limit
 weights = [0.89, 0.11] # relevance and explanatory power weigths
 eb_dataset = eb_dataset_dev # test dataset to adopt for the experiment
 hypotheses_dataset = hypothesis_dev # test hypotheses to adopt for the experiment
-
 Iterations = 4 # number of iterations
 
 # load and fit the sparse model
@@ -125,7 +124,6 @@ facts_bank_lemmatized = []
 explanations_corpus_lemmatized = []
 ids = []
 q_ids = []
-
 # construct sparse index for the facts bank
 for t_id, ts in tqdm(facts_bank.items()):
     # facts cleaning and lemmatization
@@ -148,7 +146,6 @@ for t_id, ts in tqdm(facts_bank.items()):
             lemmatized_fact.append(" ".join(temp))
     facts_bank_lemmatized.append(lemmatized_fact)
     ids.append(t_id)
-
 # construct sparse index for the explanations corpus
 for q_id, exp in tqdm(eb_dataset_train.items()):
     # transform question and candidate answer into a hypothesis
@@ -163,16 +160,18 @@ for q_id, exp in tqdm(eb_dataset_train.items()):
     lemmatized_question = " ".join(temp)
     explanations_corpus_lemmatized.append(lemmatized_question)
     q_ids.append(q_id)
-
 #fit the sparse model
 sparse_model.fit(facts_bank_lemmatized, explanations_corpus_lemmatized, ids, q_ids)
 
-#load relevance and explanatory power sparse model
+#load relevance and explanatory power using the sparse model
 RS = RelevanceScore(sparse_model)
 PW = ExplanatoryPower(sparse_model, eb_dataset_train)
 
-#perform multi-hop inference for explanation regeneration and save the results
+# Perform multi-hop inference for explanation regeneration and save the results
 for q_id, exp in tqdm(eb_dataset.items()):
+    # initialize the partially constructed explanation as an empty list
+    partial_explanation = []
+
     # transform question and candidate answer into a hypothesis
     if exp["_answerKey"] in exp["_choices"]:
           question = hypotheses_dataset[q_id][exp["_answerKey"]] 
@@ -187,14 +186,11 @@ for q_id, exp in tqdm(eb_dataset.items()):
 
     # compute the explanatory power given the hypothesis
     explanatory_power = PW.compute(q_id, lemmatized_question, Q, QK)
-    # initialize the partially constructed explanation as an empty list
-    partial_explanation = []
 
     print("===========================================", file = out_q)
 
-    # for each time step
+    # for each iteration
     for step in range(Iterations):
-
           #print the query
           print("---------------------------------------------", file = out_q)
           print("Query", step, question, file = out_q)
@@ -202,7 +198,7 @@ for q_id, exp in tqdm(eb_dataset.items()):
 
           # Compute the relevance score using the sparse model
           relevance_scores_sparse = RS.compute(lemmatized_question, K)
-        
+
           # Compute the relevance score using the dense model
           question_embedding = dense_model.encode(question)
           # FAISS works with inner product (dot product). When we normalize vectors to unit length, inner product is equal to cosine similarity
@@ -217,11 +213,11 @@ for q_id, exp in tqdm(eb_dataset.items()):
           relevance_scores_dense = {}
           for hit in hits[0:top_k_hits]:
               relevance_scores_dense[corpus_ids_original[hit['corpus_id']]] = hit['score']
-          
+
           #compute the explanatory score for each element in the facts bank
           explanatory_scores = {}
           for t_id, ts in facts_bank.items():
-              if not t_id in unification_scores:
+              if not t_id in explanatory_power:
                   explanatory_power[t_id] = 0
               if not t_id in relevance_scores_sparse:
                   relevance_scores_sparse[t_id] = 0
