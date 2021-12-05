@@ -17,13 +17,13 @@ Once the bert model is downloaded and the requirements installed, run the follow
 
 `python ./experiment.py`
 
-This will create the [FAISS](https://faiss.ai/) index and perform multi-hop inference using SCAR. The experiment is performed by default on the dev-set.
+This will create the [FAISS](https://faiss.ai/) index and perform multi-hop inference using SCAR.
 
 **Compute the Mean Average Precision (MAP) score:** 
 
 `./evaluate.py --gold=./data/questions/dev.tsv prediction.txt`
 
-Since the explanations in the test-set are masked, if you want to reproduce our results on this split, you would need to submit the predictions to the official leaderboard, which can be found [here!](https://competitions.codalab.org/competitions/20150#results)
+The experiment is performed by default on the dev-set. Since the explanations in the test-set are masked, if you want to reproduce our results on this split, you would need to submit the predictions to the official leaderboard, which can be found [here!](https://competitions.codalab.org/competitions/20150#results)
 
 ### Bibtex
 If you use SCAR in your work, or find this repository useful, please consider citing our paper.
