@@ -34,13 +34,13 @@ with open("data/cache/eb_dev.mpk", "rb") as f:
     eb_dataset_dev = msgpack.unpackb(f.read(), raw=False)
 
 #load mapping between questions and hypotheses
-with open('data/cache/hypothesis_train.json') as f:
+with open('data/cache/hypotheses_train.json') as f:
     hypothesis_train = json.load(f)
 
-with open('data/cache/hypothesis_dev.json') as f:
+with open('data/cache/hypotheses_dev.json') as f:
     hypothesis_dev = json.load(f)
 
-with open('data/cache/hypothesis_test.json') as f:
+with open('data/cache/hypotheses_test.json') as f:
     hypothesis_test = json.load(f)
 
 #load dense model
