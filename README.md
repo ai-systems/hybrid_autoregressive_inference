@@ -7,7 +7,7 @@ Regenerating natural language explanations in the scientific domain has been pro
 
 Welcome! :) 
 
-Here, you can find the code (`experiment.py`) to reproduce the results obtained by SCAR on the [Worldtree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
+Here, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR on the [Worldtree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
 
 **Dense Encoder:**
 
@@ -17,7 +17,7 @@ The Bert-based autoregressive bi-encoder used in our experiments can be download
 
 Once the dense model is downloaded and the requirements installed, run the following command to start the experiment:
 
-`python ./experiment.py`
+`python ./explanation_regeneration_experiment.py`
 
 This will create the [FAISS](https://faiss.ai/) index and perform multi-hop inference using SCAR.
 
@@ -25,7 +25,7 @@ This will create the [FAISS](https://faiss.ai/) index and perform multi-hop infe
 
 `./evaluate.py --gold=./data/questions/dev.tsv prediction.txt`
 
-The experiment is performed by default on the dev-set. Since the explanations in the test-set are masked, if you want to reproduce our results on this split, you would need to submit the predictions to the official leaderboard, which can be found [here!](https://competitions.codalab.org/competitions/20150#results)
+The experiment is performed by default on the dev-set. Since the explanations in the test-set are masked, if you want to reproduce our results on this split, you would need to submit `prediction.txt` to the official leaderboard, which can be found [here!](https://competitions.codalab.org/competitions/20150#results)
 
 ### Bibtex
 If you use SCAR in your work, or find this repository useful, please consider citing our paper.
