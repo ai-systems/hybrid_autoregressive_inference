@@ -41,10 +41,10 @@ Once the experiment is completed, you can compute the Mean Average Precision (MA
 
 The experiment is performed by default on the dev-set. 
 
-Since the explanations in the test-set are masked, if you want to reproduce our results on this split, you would need to submit `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
+Since the explanations in the test-set are masked, if you want to reproduce the results on this split, you would need to submit the file `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
 
 ### Bibtex
-If you use SCAR in your work, or find this repository useful, please consider citing our paper.
+If you use SCAR in your work, or find this repository useful, please consider citing our paper! :)
 
 
 For any issues or questions, feel free to contact us at marco.valentino@manchester.ac.uk
