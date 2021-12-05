@@ -9,7 +9,7 @@ Regenerating natural language explanations in the scientific domain has been pro
 
 Welcome! :) 
 
-Here, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR on the [Worldtree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
+Here, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR on the [WorldTree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
 
 **Dense encoder:**
 
