@@ -23,7 +23,7 @@ Install the [faiss-gpu](https://pypi.org/project/faiss-gpu/) package:
 
 **Dense encoder:**
 
-The Bert-based autoregressive bi-encoder used in our experiments can be downloaded [here!](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
+The Sentence-BERT autoregressive bi-encoder used in our experiments can be downloaded [here!](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
 
 **Run the experiment:**
 
