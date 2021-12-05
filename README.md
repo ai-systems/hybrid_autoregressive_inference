@@ -27,7 +27,7 @@ The Sentence-BERT autoregressive bi-encoder used in our experiments can be downl
 
 **Run the experiment:**
 
-Once the dense model is downloaded and the requirements installed, run the following command to start the experiment:
+Once the dense model is downloaded, run the following command to start the experiment:
 
 `python ./explanation_regeneration_experiment.py`
 
