@@ -4,7 +4,9 @@
 
 ## Reproducibility
 
-The adopted bert-based bi-encoder can be downloaded at the following [URL](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
+Code coming soon! 
+
+The bert-based autoregressive bi-encoder can be downloaded at the following [URL](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
 
 **Run the experiment:**
 
