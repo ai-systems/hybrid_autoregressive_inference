@@ -40,9 +40,6 @@ with open('data/cache/hypotheses_train.json') as f:
 with open('data/cache/hypotheses_dev.json') as f:
     hypothesis_dev = json.load(f)
 
-with open('data/cache/hypotheses_test.json') as f:
-    hypothesis_test = json.load(f)
-
 #load dense model
 dense_model_name = 'autoregressive_bert_base'
 dense_model = SentenceTransformer(dense_model_name)
