@@ -17,7 +17,7 @@ Once the bert model is downloaded and the requirements installed, run the follow
 
 `python ./experiment.py`
 
-This will create the FAISS index and perform multi-hop inference using SCAR. The experiment is performed by default on the dev-set.
+This will create the [FAISS](https://faiss.ai/) index and perform multi-hop inference using SCAR. The experiment is performed by default on the dev-set.
 
 **Compute the Mean Average Precision (MAP) score:** 
 
