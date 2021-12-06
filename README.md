@@ -4,13 +4,13 @@ Regenerating natural language explanations in the scientific domain has been pro
 
 ![Image description](approach.png)
 
-## Reproducibility
+# Reproducibility
 
 Welcome! :) 
 
 In this repository, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR (Scalable Autoregressive Inference) on the [WorldTree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
 
-**Setup:**
+## Setup:
 
 Install the [sentence-transformers](https://www.sbert.net/) package:
 
@@ -20,13 +20,13 @@ Install the [faiss-gpu](https://pypi.org/project/faiss-gpu/) package:
 
 `pip install faiss-gpu`
 
-**Dense Encoder:**
+## Dense Encoder:
 
 The pre-trained Sentence-BERT autoregressive bi-encoder used in our experiments can be downloaded [here!](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
 
 To reproduce our experiments, download the model and store it in `./models`.
 
-**Multi-hop Explanation Regeneration Experiment:**
+## Multi-hop Explanation Regeneration Experiment:
 
 Once the dense model is downloaded, run the following command to start the experiment:
 
@@ -42,7 +42,7 @@ Once the experiment is completed, you can compute the Mean Average Precision (MA
 
 The experiment is performed by default on the dev-set. If you want to reproduce our results on the test-set, you can update the test dataset and hypotheses in `explanation_regeneration_experiment.py` and submit the final `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
 
-**Training:**
+## Training:
 
 If you want to train the dense encoder from scratch, you can use the released `training.py` script. This will create a new [Sentence-BERT](https://www.sbert.net/) model (`bert-base-uncased`) and fine-tune it on the extracted inference chains `./data/training/chains_train.csv` using contrastive loss.
 If needed, you can regenerate the training-set using the `extract_chains.py` script.
