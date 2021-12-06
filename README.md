@@ -22,7 +22,8 @@ Install the [faiss-gpu](https://pypi.org/project/faiss-gpu/) package:
 
 **Dense encoder:**
 
-The Sentence-BERT autoregressive bi-encoder used in our experiments can be downloaded [here!](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
+The pre-trained Sentence-BERT autoregressive bi-encoder used in our experiments can be downloaded [here!](https://drive.google.com/file/d/1iz38q8EIYZdO9U7mAMVz1qUprU8jmEwI/view?usp=sharing)
+To reproduce our experiments, download the model and store it in `./models`.
 
 **Run the experiment:**
 
@@ -40,8 +41,13 @@ Once the experiment is completed, you can compute the Mean Average Precision (MA
 
 The experiment is performed by default on the dev-set. If you want to reproduce our results on the test-set, you can update the parameters in `explanation_regeneration_experiment.py` and submit the final `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
 
+**Training:**
+
+If you want to train the dense encoder from scratch, you can use the released `training.py` script. This will create a new [Sentence-BERT]((https://www.sbert.net/) model and fine-tune it on the extracted inference chains using contrastive loss.
+If needed, you can regenerate the training-set using the `extract_chains.py` script.
+
 ### Bibtex
-If you use SCAR in your work, or find this repository useful, please consider citing our paper! :)
+We hope you find this repository useful. If you use SCAR in your work, or find this work inspiring, please consider citing our paper! :)
 
 
 For any issues or questions, feel free to contact us at marco.valentino@manchester.ac.uk
