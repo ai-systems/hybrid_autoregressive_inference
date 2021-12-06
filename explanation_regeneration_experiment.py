@@ -240,7 +240,7 @@ for q_id, exp in tqdm(eb_dataset.items()):
         temp = []
         for word in nltk.word_tokenize(question):
             if not word.lower() in stopwords.words("english"):
-            temp.append(utils.explanation_bank_lemmatize(word.lower()))
+                temp.append(utils.explanation_bank_lemmatize(word.lower()))
         lemmatized_question = " ".join(temp)
 
     # rank the remaining sentences in the facts bank
