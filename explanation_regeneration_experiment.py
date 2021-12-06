@@ -41,7 +41,7 @@ with open('data/cache/hypotheses_dev.json') as f:
     hypotheses_dev = json.load(f)
 
 #load dense model
-dense_model_name = './models/autoregressive_bert_base'
+dense_model_name = './models/autoregressive_bert_biencoder'
 dense_model = SentenceTransformer(dense_model_name)
 
 ######### BUILD THE FAISS INDEX ###########
