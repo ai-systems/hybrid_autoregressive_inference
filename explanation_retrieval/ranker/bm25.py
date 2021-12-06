@@ -86,7 +86,7 @@ class BM25Transformer(BaseEstimator, TransformerMixin):
         X = sp.csr_matrix((data, X.indices, X.indptr), shape=X.shape)
 
         if self.use_idf:
-            check_is_fitted(self, "_idf_diag", "idf vector is not fitted")
+            check_is_fitted(self, "_idf_diag")
 
             expected_n_features = self._idf_diag.shape[0]
             if n_features != expected_n_features:

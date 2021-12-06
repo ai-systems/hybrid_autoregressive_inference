@@ -144,7 +144,7 @@ for t_id, ts in tqdm(facts_bank.items()):
 for q_id, exp in tqdm(eb_dataset_train.items()):
     # transform question and candidate answer into a hypothesis
     if exp["_answerKey"] in exp["_choices"]:
-        question = hypothesis_train[q_id][exp["_answerKey"]]
+        question = hypotheses_train[q_id][exp["_answerKey"]]
     else:
       continue
     temp = []

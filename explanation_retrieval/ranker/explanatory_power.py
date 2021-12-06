@@ -18,5 +18,5 @@ class ExplanatoryPower():
                 	explanatory_power[exp] += similar_questions[i]["score"]
         sorted_explanatory_power = {}
         for key in sorted(explanatory_power, key=explanatory_power.get, reverse=True)[:facts_limit]:
-            sorted_explanatory_power[key] = sorted_explanatory_power[key]
+            sorted_explanatory_power[key] = explanatory_power[key]
         return sorted_explanatory_power
