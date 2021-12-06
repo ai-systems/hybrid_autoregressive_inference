@@ -26,6 +26,11 @@ The pre-trained Sentence-BERT autoregressive bi-encoder used in our experiments 
 
 To reproduce our experiments, download the model and store it in `./models`.
 
+**Training:**
+
+If you want to train the dense encoder from scratch, you can use the released `training.py` script. This will create a new [Sentence-BERT](https://www.sbert.net/) model (`bert-base-uncased`) and fine-tune it on the extracted inference chains `./data/training/chains_train.csv` using contrastive loss.
+If needed, you can regenerate the training-set using the `extract_chains.py` script.
+
 ## Multi-hop Explanation Regeneration Experiment:
 
 Once the dense model is downloaded, run the following command to start the experiment:
@@ -41,11 +46,6 @@ Once the experiment is completed, you can compute the Mean Average Precision (MA
 `./evaluate.py --gold=./data/questions/dev.tsv prediction.txt`
 
 The experiment is performed by default on the dev-set. If you want to reproduce our results on the test-set, you can update the test dataset and hypotheses in `explanation_regeneration_experiment.py` and submit the final `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
-
-## Training:
-
-If you want to train the dense encoder from scratch, you can use the released `training.py` script. This will create a new [Sentence-BERT](https://www.sbert.net/) model (`bert-base-uncased`) and fine-tune it on the extracted inference chains `./data/training/chains_train.csv` using contrastive loss.
-If needed, you can regenerate the training-set using the `extract_chains.py` script.
 
 ### Bibtex
 We hope you find this repository useful. If you use SCAR in your work, or find it inspiring, please consider citing our paper! :)
