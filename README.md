@@ -39,15 +39,15 @@ Once the experiment is completed, you can compute the Mean Average Precision (MA
 
 `./evaluate.py --gold=./data/questions/dev.tsv prediction.txt`
 
-The experiment is performed by default on the dev-set. If you want to reproduce our results on the test-set, you can update the parameters in `explanation_regeneration_experiment.py` and submit the final `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
+The experiment is performed by default on the dev-set. If you want to reproduce our results on the test-set, you can update the test dataset and hypotheses in `explanation_regeneration_experiment.py` and submit the final `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
 
 **Training:**
 
-If you want to train the dense encoder from scratch, you can use the released `training.py` script. This will create a new [Sentence-BERT]((https://www.sbert.net/) model and fine-tune it on the extracted inference chains using contrastive loss.
+If you want to train the dense encoder from scratch, you can use the released `training.py` script. This will create a new [Sentence-BERT]((https://www.sbert.net/) model (`bert-base-uncased`) and fine-tune it on the extracted inference chains `./data/training/chains_train.csv` using contrastive loss.
 If needed, you can regenerate the training-set using the `extract_chains.py` script.
 
 ### Bibtex
-We hope you find this repository useful. If you use SCAR in your work, or find this work inspiring, please consider citing our paper! :)
+We hope you find this repository useful. If you use SCAR in your work, or find it inspiring, please consider citing our paper! :)
 
 
 For any issues or questions, feel free to contact us at marco.valentino@manchester.ac.uk
