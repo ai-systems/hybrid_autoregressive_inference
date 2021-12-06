@@ -1,6 +1,6 @@
 """
-Loads a pre-trained SentenceTransformer model.
-It then fine-tunes this model for some epochs on the teacher ratings.
+Code to reproduce the results on the multi-hop explanation regeneration task ( https://github.com/umanlp/tg2019task )
+presented in "Hybrid Autoregressive Inference for Scalable Multi-hop Explanation Regeneration" (AAAI 2022)
 """
 import math
 from torch.utils.data import DataLoader
@@ -18,7 +18,7 @@ with open("./data/training/corpus.json", "rb") as f:
 with open("./data/training/explanations_dev.json", "rb") as f: 
     explanations = json.load(f) 
 
-with open("./data/trainingqueries_dev.json", "rb") as f: 
+with open("./data/training/queries_dev.json", "rb") as f: 
     queries = json.load(f) 
 
 #### Just some code to print debug information to stdout
@@ -31,7 +31,7 @@ logging.basicConfig(format='%(asctime)s - %(message)s',
 # parameters
 train_batch_size = 16
 num_epochs = 3
-model_save_path = './models/autoregressive_bert_base'
+model_save_path = './models/autoregressive_bert_biencoder'
 
 #create a new model e.g. "scibert" 'allenai/scibert_scivocab_uncased'
 word_embedding_model = models.Transformer('bert-base-uncased', max_seq_length = 128)
