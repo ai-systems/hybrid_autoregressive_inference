@@ -34,7 +34,7 @@ If needed, you can regenerate the training-set using the `extract_chains.py` scr
 
 ## Multi-hop Explanation Regeneration Experiment:
 
-Once the dense model is downloaded, run the following command to start the experiment:
+Once the dense model is downloaded and unzipped in the apposite folder, run the following command to start the experiment:
 
 `python ./explanation_regeneration_experiment.py`
 
