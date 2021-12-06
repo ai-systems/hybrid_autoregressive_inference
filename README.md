@@ -48,7 +48,7 @@ Once the experiment is completed, you can compute the Mean Average Precision (MA
 
 The experiment is performed by default on the dev-set. If you want to reproduce our results on the test-set, you can update the test dataset and hypotheses in `explanation_regeneration_experiment.py` and submit the final `prediction.txt` to the official [leaderboard](https://competitions.codalab.org/competitions/20150#results).
 
-### Bibtex
+## Cite
 We hope you find this repository useful. If you use SCAR in your work, or find it inspiring, please consider citing our paper! :)
 
 
