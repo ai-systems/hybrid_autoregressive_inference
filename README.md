@@ -28,7 +28,7 @@ To reproduce our experiments, download the model and store it in `./models`.
 
 **Training:**
 
-If you want to train the dense encoder from scratch, you can use the released `training.py` script. This will create a new [Sentence-BERT](https://www.sbert.net/) model (`bert-base-uncased`) and fine-tune it on the extracted inference chains `./data/training/chains_train.csv` using contrastive loss.
+If you want to train the dense encoder from scratch, you can use the released `training.py` script. This will create a new [Sentence-BERT](https://www.sbert.net/) model (`bert-base-uncased`) and fine-tune it on the inference chains stored in `./data/training/chains_train.csv` using contrastive loss.
 If needed, you can regenerate the training-set using the `extract_chains.py` script.
 
 ## Multi-hop Explanation Regeneration Experiment:
