@@ -13,7 +13,7 @@ Our experiments demonstrate that the hybrid framework significantly outperforms 
 
 Welcome! :) 
 
-In this repository, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by SCAR (Scalable Autoregressive Inference) on the [WorldTree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
+In this repository, you can find the code (`explanation_regeneration_experiment.py`) to reproduce the results obtained by [SCAR](https://arxiv.org/abs/2107.11879) (Scalable Autoregressive Inference) on the [WorldTree Multi-hop Explanation Regeneration Task](https://github.com/umanlp/tg2019task).
 
 ## Setup:
 
@@ -56,5 +56,13 @@ The experiment is performed by default on the dev-set. If you want to reproduce 
 ## Citation
 We hope you find this repository useful. If you use SCAR in your work, or find it inspiring, please consider citing our paper! :)
 
+```
+@article{valentino2021hybrid,
+  title={Hybrid Autoregressive Inference for Scalable Multi-hop Explanation Regeneration},
+  author={Valentino, Marco and Thayaparan, Mokanarangan and Ferreira, Deborah and Freitas, Andr{\'e}},
+  journal={arXiv preprint arXiv:2107.11879},
+  year={2021}
+}
+```
 
 For any issues or questions, feel free to contact us at marco.valentino@manchester.ac.uk
