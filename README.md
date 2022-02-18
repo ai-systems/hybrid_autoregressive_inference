@@ -1,4 +1,4 @@
-# Hybrid Autoregressive Inference for Scalable Multi-hop Explanation Regeneration (AAAI 2022 - Main Track - Oral)
+# Hybrid Autoregressive Inference for Scalable Multi-hop Explanation Regeneration (AAAI 2022 - Main Track)
 
 Regenerating natural language explanations in the scientific domain has been proposed as a benchmark to evaluate complex multi-hop and explainable inference. In this context, large language models can achieve state-of-the-art performance when employed as cross-encoder architectures and fine-tuned on human-annotated explanations. 
 However, while much attention has been devoted to the quality of the explanations, the problem of performing inference efficiently is largely under-studied. Cross-encoders, in fact, are intrinsically not scalable, possessing limited applicability to real-world scenarios that require inference on massive facts banks.
