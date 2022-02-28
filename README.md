@@ -57,11 +57,11 @@ The experiment is performed by default on the dev-set. If you want to reproduce 
 We hope you find this repository useful. If you use SCAR in your work, please consider citing our paper!
 
 ```
-@article{valentino2021hybrid,
+@inproceedings{valentino2021hybrid,
   title={Hybrid Autoregressive Inference for Scalable Multi-hop Explanation Regeneration},
   author={Valentino, Marco and Thayaparan, Mokanarangan and Ferreira, Deborah and Freitas, Andr{\'e}},
-  journal={arXiv preprint arXiv:2107.11879},
-  year={2021}
+  booktitle={36th AAAI Conference on Artificial Intelligence},
+  year={2022}
 }
 ```
 
