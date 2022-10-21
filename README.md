@@ -71,4 +71,4 @@ We hope you find this repository useful. If you use SCAR in your work, please co
 }
 ```
 
-For any issues or questions, feel free to contact us at marco.valentino@manchester.ac.uk
+For any issues or questions, feel free to contact us at marco.valentino@idiap.ch
